@@ -11,7 +11,7 @@ import SpriteKit
 
 protocol Bumper {
     
-    
+    func node() -> SKNode
 }
 
 
@@ -24,6 +24,9 @@ class CircleBumper: SKShapeNode, Bumper {
         self.radius = radius
     }
     
+    func node() -> SKNode {
+        return self
+    }
 }
 
 class SpriteBumper: SKSpriteNode, Bumper {
@@ -33,4 +36,7 @@ class SpriteBumper: SKSpriteNode, Bumper {
         self.init(texture: texture)
     }
     
+    func node() -> SKNode {
+        return self
+    }
 }

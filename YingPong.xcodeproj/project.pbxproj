@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4759189422C25A8900C494B5 /* SKNodeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4759189322C25A8900C494B5 /* SKNodeExtensions.swift */; };
 		47CC219922BA75570087DC2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CC219822BA75570087DC2A /* AppDelegate.swift */; };
 		47CC219B22BA75570087DC2A /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 47CC219A22BA75570087DC2A /* GameScene.sks */; };
 		47CC219D22BA75570087DC2A /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 47CC219C22BA75570087DC2A /* Actions.sks */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4759189322C25A8900C494B5 /* SKNodeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKNodeExtensions.swift; sourceTree = "<group>"; };
 		47CC219522BA75570087DC2A /* YingPong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YingPong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47CC219822BA75570087DC2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47CC219A22BA75570087DC2A /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				47CC21B322C241D50087DC2A /* CGPointExtensions.swift */,
+				4759189322C25A8900C494B5 /* SKNodeExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				47CC219F22BA75570087DC2A /* GameScene.swift in Sources */,
 				47CC21A122BA75570087DC2A /* GameViewController.swift in Sources */,
 				47CC21B722C242860087DC2A /* Arc.swift in Sources */,
+				4759189422C25A8900C494B5 /* SKNodeExtensions.swift in Sources */,
 				47CC21B422C241D50087DC2A /* CGPointExtensions.swift in Sources */,
 				47CC21B922C242940087DC2A /* Bumper.swift in Sources */,
 				47CC219922BA75570087DC2A /* AppDelegate.swift in Sources */,

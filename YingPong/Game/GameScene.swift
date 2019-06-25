@@ -11,10 +11,26 @@ import GameplayKit
 
 class GameScene: SKScene {
     
-    private var label : SKLabelNode?
-    private var spinnyNode : SKShapeNode?
+    let mapCenter: CGPoint = .zero
+    var mapRadius: CGFloat!
+    
+    var arcColors: [UIColor]!
+    var bumperColors: [UIColor]!
+    
+    var lightSideColor: UIColor?
+    var darkSideColor: UIColor = .black
+    
+    var bumperRadius: CGFloat!
     
     override func didMove(to view: SKView) {
+        
+        backgroundColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1)
+        
+        arcColors = [.purple, .purple]
+        bumperColors = [.white, .black]
+        
+        mapRadius = (min(view.frame.width, view.frame.height) / 1.5)
+        bumperRadius = mapRadius/5
         
         // Get label node from scene and store it for use later
 //        self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
@@ -23,6 +39,26 @@ class GameScene: SKScene {
 //            label.run(SKAction.fadeIn(withDuration: 2.0))
 //        }
         
+        createMap()
+        
+    }
+    
+    func createMap() {
+        let rightArc = Arc(facing: mapCenter, angle: 0, radius: mapRadius, length: CGFloat.pi * 0.7, width: 5)
+        rightArc.fillColor = arcColors[0]
+        
+        let leftArc = Arc(facing: mapCenter, angle: CGFloat.pi, radius: mapRadius, length: CGFloat.pi * 0.7, width: 5)
+        leftArc.fillColor = arcColors[1]
+        
+        let rightBumper = CircleBumper(radius: bumperRadius)
+        rightBumper.position = CGPoint(x: -mapRadius/2, y: 0)
+        rightBumper.fillColor = bumperColors[0]
+        
+        let leftBumper = CircleBumper(radius: bumperRadius)
+        leftBumper.position = CGPoint(x: mapRadius/2, y: 0)
+        leftBumper.fillColor = bumperColors[1]
+        
+        self.addChildren(nodes: [rightArc, leftArc, rightBumper, leftBumper])
     }
     
     
