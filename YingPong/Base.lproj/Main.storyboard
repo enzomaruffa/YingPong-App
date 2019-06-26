@@ -90,17 +90,33 @@
                             <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cez-r1-eSJ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </skView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QoM-er-73d">
+                                <rect key="frame" x="50" y="782" width="120" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Player1 clockwise"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZK-jD-2UM">
+                                <rect key="frame" x="218" y="782" width="146" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Player1 anticlockwise"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="cez-r1-eSJ" secondAttribute="bottom" id="HRf-4Z-8BN"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="qZK-jD-2UM" secondAttribute="trailing" constant="50" id="IT3-gY-WbL"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="QoM-er-73d" secondAttribute="bottom" constant="50" id="KCS-Lr-5km"/>
                             <constraint firstItem="cez-r1-eSJ" firstAttribute="top" secondItem="3se-qz-xqx" secondAttribute="top" id="QKH-m9-amo"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="qZK-jD-2UM" secondAttribute="bottom" constant="50" id="Sgv-gm-UB9"/>
                             <constraint firstItem="cez-r1-eSJ" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leading" id="V0F-xt-UFk"/>
+                            <constraint firstItem="QoM-er-73d" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="50" id="d8K-wp-6cY"/>
                             <constraint firstAttribute="trailing" secondItem="cez-r1-eSJ" secondAttribute="trailing" id="jRy-bm-gq5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                     </view>
                     <connections>
+                        <outlet property="p1AntiClockwiseButton" destination="qZK-jD-2UM" id="dQC-bT-Z8I"/>
+                        <outlet property="p1ClockwiseButton" destination="QoM-er-73d" id="jFg-Vo-riD"/>
                         <outlet property="skView" destination="cez-r1-eSJ" id="mCL-sn-tl4"/>
                     </connections>
                 </viewController>

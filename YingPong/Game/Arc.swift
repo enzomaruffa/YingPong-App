@@ -21,12 +21,12 @@ class Arc: SKShapeNode {
         let clockwise = false
         
         let path = CGMutablePath()
-        
-        print("Creating arc...")
-        print("Start...", startAngle)
-        print("End...", endAngle)
-        
-        print(arcStart)
+//        
+//        print("Creating arc...")
+//        print("Start...", startAngle)
+//        print("End...", endAngle)
+//        
+//        print(arcStart)
         path.move(to: arcStart)
         path.addArc(center: center, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: clockwise)
         
@@ -35,6 +35,8 @@ class Arc: SKShapeNode {
         path.closeSubpath()
         
         self.init(path: path)
+        
+        self.physicsBody = SKPhysicsBody(polygonFrom: path)
     }
     
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4759189422C25A8900C494B5 /* SKNodeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4759189322C25A8900C494B5 /* SKNodeExtensions.swift */; };
+		4759189622C392F600C494B5 /* ControllableArc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4759189522C392F600C494B5 /* ControllableArc.swift */; };
 		47CC219922BA75570087DC2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CC219822BA75570087DC2A /* AppDelegate.swift */; };
 		47CC219B22BA75570087DC2A /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 47CC219A22BA75570087DC2A /* GameScene.sks */; };
 		47CC219D22BA75570087DC2A /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 47CC219C22BA75570087DC2A /* Actions.sks */; };
@@ -17,7 +18,7 @@
 		47CC21A622BA75580087DC2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47CC21A522BA75580087DC2A /* Assets.xcassets */; };
 		47CC21A922BA75580087DC2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47CC21A722BA75580087DC2A /* LaunchScreen.storyboard */; };
 		47CC21B122BA75E00087DC2A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CC21B022BA75E00087DC2A /* MenuViewController.swift */; };
-		47CC21B422C241D50087DC2A /* CGPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CC21B322C241D50087DC2A /* CGPointExtensions.swift */; };
+		47CC21B422C241D50087DC2A /* CGPointVectorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CC21B322C241D50087DC2A /* CGPointVectorExtensions.swift */; };
 		47CC21B722C242860087DC2A /* Arc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CC21B622C242860087DC2A /* Arc.swift */; };
 		47CC21B922C242940087DC2A /* Bumper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CC21B822C242940087DC2A /* Bumper.swift */; };
 		47CC21BB22C2429F0087DC2A /* Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CC21BA22C2429F0087DC2A /* Ball.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		4759189322C25A8900C494B5 /* SKNodeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKNodeExtensions.swift; sourceTree = "<group>"; };
+		4759189522C392F600C494B5 /* ControllableArc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllableArc.swift; sourceTree = "<group>"; };
 		47CC219522BA75570087DC2A /* YingPong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YingPong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47CC219822BA75570087DC2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47CC219A22BA75570087DC2A /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -36,7 +38,7 @@
 		47CC21A822BA75580087DC2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47CC21AA22BA75580087DC2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47CC21B022BA75E00087DC2A /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		47CC21B322C241D50087DC2A /* CGPointExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPointExtensions.swift; sourceTree = "<group>"; };
+		47CC21B322C241D50087DC2A /* CGPointVectorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPointVectorExtensions.swift; sourceTree = "<group>"; };
 		47CC21B622C242860087DC2A /* Arc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arc.swift; sourceTree = "<group>"; };
 		47CC21B822C242940087DC2A /* Bumper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bumper.swift; sourceTree = "<group>"; };
 		47CC21BA22C2429F0087DC2A /* Ball.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ball.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				47CC21B622C242860087DC2A /* Arc.swift */,
 				47CC21B822C242940087DC2A /* Bumper.swift */,
 				47CC21BA22C2429F0087DC2A /* Ball.swift */,
+				4759189522C392F600C494B5 /* ControllableArc.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -101,7 +104,7 @@
 		47CC21B522C241E70087DC2A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				47CC21B322C241D50087DC2A /* CGPointExtensions.swift */,
+				47CC21B322C241D50087DC2A /* CGPointVectorExtensions.swift */,
 				4759189322C25A8900C494B5 /* SKNodeExtensions.swift */,
 			);
 			path = Extensions;
@@ -183,9 +186,10 @@
 				47CC21BB22C2429F0087DC2A /* Ball.swift in Sources */,
 				47CC219F22BA75570087DC2A /* GameScene.swift in Sources */,
 				47CC21A122BA75570087DC2A /* GameViewController.swift in Sources */,
+				4759189622C392F600C494B5 /* ControllableArc.swift in Sources */,
 				47CC21B722C242860087DC2A /* Arc.swift in Sources */,
 				4759189422C25A8900C494B5 /* SKNodeExtensions.swift in Sources */,
-				47CC21B422C241D50087DC2A /* CGPointExtensions.swift in Sources */,
+				47CC21B422C241D50087DC2A /* CGPointVectorExtensions.swift in Sources */,
 				47CC21B922C242940087DC2A /* Bumper.swift in Sources */,
 				47CC219922BA75570087DC2A /* AppDelegate.swift in Sources */,
 				47CC21B122BA75E00087DC2A /* MenuViewController.swift in Sources */,

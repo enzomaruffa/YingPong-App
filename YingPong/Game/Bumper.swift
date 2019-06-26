@@ -22,6 +22,7 @@ class CircleBumper: SKShapeNode, Bumper {
     convenience init(radius: CGFloat) {
         self.init(circleOfRadius: radius)
         self.radius = radius
+        self.physicsBody = SKPhysicsBody(circleOfRadius: radius)
     }
     
     func node() -> SKNode {
@@ -34,6 +35,7 @@ class SpriteBumper: SKSpriteNode, Bumper {
     convenience init(fileNamed: String) {
         let texture = SKTexture(imageNamed: fileNamed)
         self.init(texture: texture)
+        self.physicsBody = SKPhysicsBody(texture: texture, size: self.size)
     }
     
     func node() -> SKNode {
